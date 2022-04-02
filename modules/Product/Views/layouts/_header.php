@@ -1,0 +1,89 @@
+<div x-data="{ openSidebar: false, logModal: false, regModal: false }" class="bg-white ">
+
+  <?= $this->include('\Modules\Product\Views\Layouts\_log-reg-modal') ?>
+  <?= $this->include('\Modules\Product\Views\Layouts\_mobile-header') ?>
+
+  <header class="relative bg-white">
+    <p class="bg-indigo-600 h-10 flex items-center justify-center text-sm font-medium text-white px-4 sm:px-6 lg:px-8">Get free delivery on orders over $100</p>
+
+    <nav x-data="{ search: false }" aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="border-b border-gray-200">
+        <div class="h-16 flex items-center">
+          <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
+          <button @click="openSidebar = true" type="button" class="bg-white p-2 rounded-md text-gray-400 lg:hidden">
+            <span class="sr-only">Open menu</span>
+            <!-- Heroicon name: outline/menu -->
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
+          <!-- Logo -->
+          <div class="ml-4 flex lg:ml-0">
+            <a href="#">
+              <span class="sr-only">Workflow</span>
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="">
+            </a>
+          </div>
+
+          <!-- Flyout menus -->
+          <div class="hidden lg:ml-8 lg:block lg:self-stretch">
+            <div class="h-full flex space-x-8">
+              <button class="flex items-center text-[0.9375rem] font-semibold transition-colors text-gray-700 hover:text-orange-500">
+                <i class="fa-solid fa-bars"></i>&nbsp; Categories &nbsp;<i class="fa-solid fa-caret-down"></i>
+              </button>
+            </div>
+
+            <?= $this->include('\Modules\Product\Views\Layouts\_categories-hover') ?>
+
+          </div>
+
+          <div class="ml-auto flex items-center">
+
+            <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-4">
+              <button @click="logModal = true" class="text-sm font-medium transition-colors text-gray-700 hover:text-orange-500">Sign in</button>
+              <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
+              <button @click="regModal = true" class="text-sm font-medium transition-colors text-gray-700 hover:text-orange-500">Create account</button>
+            </div>
+
+            <!-- Search -->
+            <div class="flex lg:ml-6 ">
+              <a @click="search = !search" @keydown.escape="search = false" href="#" class="p-2 text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Search</span>
+                <!-- Heroicon name: outline/search -->
+                <svg class="w-6 h-6" :class="{ 'text-indigo-500': search }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Cart -->
+            <div class="ml-4 flow-root lg:ml-6">
+              <a href="#" class="group -m-2 p-2 flex items-center">
+                <!-- Heroicon name: outline/shopping-bag -->
+                <svg class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <span class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                <span class="sr-only">items in cart, view bag</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Search -->
+      <div x-show="search" x-collapse class="shadow-lg ">
+        <form class="group relative ">
+          <svg width="20" height="20" class="hidden absolute right-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:block group-focus-within:text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          <input class="focus:ring-1 focus:ring-indigo-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-700 placeholder-slate-400 rounded py-2 pl-3 ring-1 ring-slate-200" type="text" aria-label="Find product" placeholder="Find product..." autofocus>
+        </form>
+      </div>
+
+      <!-- Categories -->
+
+    </nav>
+  </header>
+</div>

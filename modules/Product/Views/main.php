@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="<?= base_url(); ?>/css/app.css">
+  <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+  <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+  <style>
+    .embla {
+      overflow: hidden;
+    }
+
+    .embla__container {
+      display: flex;
+    }
+
+    .embla__slide {
+      position: relative;
+      flex: 0 0 100%;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <?= $this->include('\Modules\Product\Views\Layouts\_header') ?>
+
+  <div class="bg-slate-100">
+    <?= $this->renderSection('content') ?>
+  </div>
+
+
+  <script type="text/javascript">
+    const emblaNode = document.querySelector(".embla");
+    const loop = {
+      loop: true
+    };
+    const autoplay = [EmblaCarouselAutoplay({
+      delay: 3000,
+      stopOnInteraction: false
+    }, (emblaRoot) => emblaRoot.parentElement)];
+
+    const embla = EmblaCarousel(emblaNode, loop, autoplay);
+  </script>
+</body>
+
+</html>
