@@ -1,5 +1,5 @@
 <!-- Login Modal -->
-<div x-show="logModal" x-transition:enter="transition-opacity ease-linear duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="mx-auto fixed inset-0 flex items-center justify-center overflow-y-auto bg-black z-40 bg-opacity-25">
+<div x-show="logModal" x-cloak x-transition:enter="transition-opacity ease-linear duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="mx-auto fixed inset-0 flex items-center justify-center overflow-y-auto bg-black z-40 bg-opacity-25">
   <div class="p-4 w-full max-w-md h-full md:h-auto">
     <!-- Modal content -->
     <div @click.away="logModal = false" class="bg-white rounded shadow-lg dark:bg-gray-700">
@@ -57,7 +57,7 @@
 
 
 <!-- Register Modal -->
-<div x-show="regModal" x-transition:enter="transition-opacity ease-linear duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="mx-auto fixed inset-0 flex items-center justify-center overflow-y-auto bg-black z-40 bg-opacity-25">
+<div x-show="regModal" x-cloak x-transition:enter="transition-opacity ease-linear duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="mx-auto fixed inset-0 flex items-center justify-center overflow-y-auto bg-black z-40 bg-opacity-25">
   <div class="p-4 w-full max-w-md h-full md:h-auto">
     <!-- Modal content -->
     <div class="bg-white rounded shadow-lg dark:bg-gray-700">

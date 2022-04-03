@@ -1,8 +1,8 @@
 <div>
   <!-- Off-canvas menu overlay, show/hide based on off-canvas menu state. -->
-  <div x-show="openSidebar" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 bg-black z-40 bg-opacity-25 lg:hidden" aria-hidden="true"></div>
+  <div x-show="openSidebar" x-cloak x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 bg-black z-40 bg-opacity-25 lg:hidden" aria-hidden="true"></div>
   <!-- Mobile menu Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
-  <div x-show="openSidebar" x-transition:enter="transition ease-in-out duration-300 transform" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in-out duration-300 transform" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full" class="fixed inset-0 flex z-40 lg:hidden" role="dialog" aria-modal="true">
+  <div x-show="openSidebar" x-cloak x-transition:enter="transition ease-in-out duration-300 transform" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in-out duration-300 transform" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full" class="fixed inset-0 flex z-40 lg:hidden" role="dialog" aria-modal="true">
 
     <!-- Off-canvas menu, show/hide based on off-canvas menu state. -->
     <div @click.away="openSidebar = false" class="relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">

@@ -73,7 +73,7 @@
       </div>
 
       <!-- Input Search -->
-      <div x-show="search" x-collapse class="shadow-lg ">
+      <div x-show="search" x-cloak x-collapse class="shadow-lg ">
         <form class="group relative ">
           <svg width="20" height="20" class="hidden absolute right-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:block group-focus-within:text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />

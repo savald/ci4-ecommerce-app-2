@@ -13,6 +13,10 @@
   <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
   <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
   <style>
+    [x-cloak] {
+      display: none !important;
+    }
+
     .embla {
       overflow: hidden;
     }
@@ -32,10 +36,9 @@
 <body>
   <?= $this->include('\Modules\Product\Views\Layouts\_header') ?>
 
-  <div class="bg-slate-100">
-    <?= $this->renderSection('content') ?>
-  </div>
+  <?= $this->renderSection('content') ?>
 
+  <hr class="my-96">
 
   <script type="text/javascript">
     const emblaNode = document.querySelector(".embla");
