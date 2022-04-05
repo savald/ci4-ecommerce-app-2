@@ -20,7 +20,7 @@
 
           <!-- Logo -->
           <div class="ml-4 flex lg:ml-0">
-            <a href="#">
+            <a href="/product">
               <span class="sr-only">Workflow</span>
               <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="">
             </a>
@@ -29,9 +29,9 @@
           <!-- Flyout menus -->
           <div class="hidden lg:ml-8 lg:block lg:self-stretch">
             <div class="h-full flex space-x-8">
-              <button class="flex items-center text-[0.9375rem] font-semibold transition-colors text-gray-700 hover:text-orange-500">
+              <a href="/product/categories" class="flex items-center text-[0.9375rem] font-semibold transition-colors text-gray-700 hover:text-orange-500">
                 <i class="fa-solid fa-bars"></i>&nbsp; Categories &nbsp;<i class="fa-solid fa-caret-down"></i>
-              </button>
+              </a>
             </div>
 
             <?= $this->include('\Modules\Product\Views\Layouts\_categories-hover') ?>
@@ -59,7 +59,7 @@
 
             <!-- Cart -->
             <div class="ml-4 flow-root lg:ml-6">
-              <a href="#" class="group -m-2 p-2 flex items-center">
+              <a href="/product/view-cart" class="group -m-2 p-2 flex items-center">
                 <!-- Heroicon name: outline/shopping-bag -->
                 <svg class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -73,12 +73,12 @@
       </div>
 
       <!-- Input Search -->
-      <div x-show="search" x-cloak x-collapse class="shadow-lg ">
+      <div x-show="search" x-cloak x-collapse class="shadow">
         <form class="group relative ">
           <svg width="20" height="20" class="hidden absolute right-3 top-1/2 -mt-2.5 text-slate-400 pointer-events-none group-focus-within:block group-focus-within:text-indigo-500" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
-          <input class="focus:ring-1 focus:ring-indigo-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-700 placeholder-slate-400 rounded py-2 pl-3 ring-1 ring-slate-200" type="text" aria-label="Find product" placeholder="Find product..." autofocus>
+          <input class="focus:ring-1 focus:ring-indigo-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-700 placeholder-slate-400 rounded-b py-2 pl-3 ring-1 ring-slate-200" type="text" aria-label="Find product" placeholder="Find product..." autofocus>
         </form>
       </div>
 

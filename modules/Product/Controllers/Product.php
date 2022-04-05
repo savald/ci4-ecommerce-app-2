@@ -11,4 +11,19 @@ class Product extends BaseController
   {
     return view('\Modules\Product\Views\Pages\Home');
   }
+
+  public function viewProduct($slug = null)
+  {
+    return view('\Modules\Product\Views\Pages\view-product');
+  }
+
+  public function viewCart($slug = null)
+  {
+    return view('\Modules\Product\Views\Pages\view-cart');
+  }
+
+  public function categories($slug = null)
+  {
+    return view('\Modules\Product\Views\Pages\categories');
+  }
 }

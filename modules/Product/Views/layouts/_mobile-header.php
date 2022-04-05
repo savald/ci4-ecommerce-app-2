@@ -28,7 +28,6 @@
           </div>
         </div>
 
-        <!-- 'Women' tab panel, show/hide based on tab state. -->
         <div id="tabs-1-panel-1" class="pt-10 pb-8 px-4 space-y-10" aria-labelledby="tabs-1-tab-1" role="tabpanel" tabindex="0">
 
           <!-- Category with Image -->

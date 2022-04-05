@@ -6,7 +6,10 @@ module.exports = {
     "./modules/Product/Views/**/**/**/*.php",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {xxs: ['10px', '12px']},
+      inter: ['Inter', 'sans-serif'],
+    },
   },
   corePlugins: {
     aspectRatio: false,

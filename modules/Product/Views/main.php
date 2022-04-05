@@ -34,8 +34,13 @@
 </head>
 
 <body>
+  <!-- Header -->
   <?= $this->include('\Modules\Product\Views\Layouts\_header') ?>
 
+  <!-- Breadcrumb -->
+  <?= $this->include('\Modules\Product\Views\Layouts\_breadcrumb') ?>
+
+  <!-- Content -->
   <?= $this->renderSection('content') ?>
 
   <hr class="my-96">
