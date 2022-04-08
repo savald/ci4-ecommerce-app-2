@@ -1,0 +1,13 @@
+<?php
+
+namespace User\Controllers;
+
+use App\Controllers\BaseController;
+
+class User extends BaseController
+{
+    public function index()
+    {
+        //
+    }
+}

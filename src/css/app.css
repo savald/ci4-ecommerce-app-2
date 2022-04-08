@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 @layer components {
   .viewport {
     @apply max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8;

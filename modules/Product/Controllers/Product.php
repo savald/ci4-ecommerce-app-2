@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Product\Controllers;
+namespace Product\Controllers;
 
 use App\Controllers\BaseController;
 
@@ -9,21 +9,37 @@ class Product extends BaseController
 {
   public function index()
   {
-    return view('\Modules\Product\Views\Pages\Home');
+    $data = [
+      'title' => 'Home',
+    ];
+
+    return view('Product\Views\Pages\Home', $data);
   }
 
   public function viewProduct($slug = null)
   {
-    return view('\Modules\Product\Views\Pages\view-product');
+    $data = [
+      'title' => 'View Product',
+    ];
+
+    return view('Product\Views\Pages\view-product', $data);
   }
 
   public function viewCart($slug = null)
   {
-    return view('\Modules\Product\Views\Pages\view-cart');
+    $data = [
+      'title' => 'View Cart',
+    ];
+
+    return view('Product\Views\Pages\view-cart', $data);
   }
 
   public function categories($slug = null)
   {
-    return view('\Modules\Product\Views\Pages\categories');
+    $data = [
+      'title' => 'Categories',
+    ];
+
+    return view('Product\Views\Pages\categories', $data);
   }
 }

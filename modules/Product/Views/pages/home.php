@@ -38,13 +38,13 @@
         <div class="embla">
           <div class="embla__container">
             <div class="embla__slide lg:h-[30rem]">
-              <img src="<?= base_url(); ?>/img/bg/1.jpg" class="bg-cover bg-bottom">
+              <img src="<?= base_url(); ?>/img/bg/1.jpg" class="w-full h-full object-cover object-top">
             </div>
             <div class="embla__slide lg:h-[30rem]">
-              <img src="<?= base_url(); ?>/img/bg/2.jpg" class="bg-cover bg-bottom">
+              <img src="<?= base_url(); ?>/img/bg/2.jpg" class="w-full h-full object-cover object-top">
             </div>
             <div class="embla__slide lg:h-[30rem]">
-              <img src="<?= base_url(); ?>/img/bg/3.jpg" class="bg-cover bg-bottom">
+              <img src="<?= base_url(); ?>/img/bg/3.jpg" class="w-full h-full object-cover object-top">
             </div>
           </div>
         </div>
@@ -74,14 +74,14 @@
               <p class="text-xs font-bold text-indigo-600 lg:text-base">$35</p>
             </div>
             <div class=" p-3">
-              <div class="text-xxs text-yellow-400">
+              <div class="text-xs text-yellow-400">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star"></i>
               </div>
-              <p class="text-xxs mt-1 text-slate-700">129 sold</p>
+              <p class="text-xs mt-1 text-slate-700">129 sold</p>
             </div>
           </a>
         </div>
