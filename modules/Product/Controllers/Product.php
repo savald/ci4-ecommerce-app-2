@@ -25,16 +25,25 @@ class Product extends BaseController
     return view('Product\Views\Pages\view-product', $data);
   }
 
-  public function viewCart($slug = null)
+  public function viewCart($userId = null)
   {
     $data = [
-      'title' => 'View Cart',
+      'title' => 'Cart',
     ];
 
     return view('Product\Views\Pages\view-cart', $data);
   }
 
-  public function categories($slug = null)
+  public function viewWishlist($userId = null)
+  {
+    $data = [
+      'title' => 'Wishlist',
+    ];
+
+    return view('Product\Views\Pages\view-wishlist', $data);
+  }
+
+  public function categories()
   {
     $data = [
       'title' => 'Categories',

@@ -3,6 +3,7 @@ $routes->group('product', ['namespace' => 'Product\Controllers'], function ($rou
   $routes->get('/', 'Product::index');
   $routes->get('view-product', 'Product::viewProduct');
   $routes->get('view-cart', 'Product::viewCart');
+  $routes->get('view-wishlist', 'Product::viewWishlist');
   $routes->get('categories', 'Product::categories');
 });
 

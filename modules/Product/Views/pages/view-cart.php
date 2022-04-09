@@ -34,7 +34,9 @@
                 </div>
               </div>
             </div>
+            
           </li>
+
           <li class="flex py-6">
             <div class="h-20 w-20 lg:h-32 lg:w-32 flex-shrink-0 overflow-hidden rounded shadow-sm border border-gray-200">
               <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center" />
