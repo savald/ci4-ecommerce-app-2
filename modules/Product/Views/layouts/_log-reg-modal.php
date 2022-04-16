@@ -28,7 +28,6 @@
         <form class="px-4 pb-4 space-y-6 lg:px-8 sm:pb-6 xl:pb-8" action="<?= site_url('user/login'); ?>" method="POST">
           <?= csrf_field() ?>
           <div class="flex flex-row justify-center mb-8">
-            <!-- <span class="absolute bg-white px-4 text-gray-500">or sign-in with</span> -->
             <span class="absolute bg-white px-4 text-sm font-semibold text-center text-gray-500 dark:text-white">or with email</span>
             <div class="w-full bg-gray-200 mt-2.5 h-px"></div>
           </div>

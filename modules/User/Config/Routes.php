@@ -1,9 +1,7 @@
 <?php
 $routes->group('user', ['namespace' => 'User\Controllers'], function ($routes) {
-  // $routes->get('/', 'Product::index');
-  $routes->post('create-account', 'Auth::createAccount');
-  $routes->post('login', 'Auth::login');
+  $routes->post('create-account', 'User::create-account');
+  $routes->post('login', 'User::login');
+  $routes->get('account', 'Dashboard::index');
+  $routes->get('products', 'Dashboard::products');
 });
-
-// $routes = \Config\Services::routes();
-// $routes->get('product', 'Product\Controllers\Product::index');

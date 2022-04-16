@@ -12,7 +12,6 @@
           <img src="https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg" class="object-center object-cover transition group-hover:scale-110">
 
           <a href="#" class="flex font-medium text-gray-900 ">
-            <!-- <span class="absolute z-10 inset-0" aria-hidden="true"></span> -->
             <div class="px-4 py-2 flex flex-col justify-center text-white text-center bg-black bg-opacity-30">
               <h3 class="font-medium">New Arrivals</h3>
               <p aria-hidden="true" class="text-sm">Shop now</p>
@@ -24,7 +23,6 @@
           <img src="https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg" class="object-center object-cover transition group-hover:scale-110">
 
           <a href="#" class="flex font-medium text-gray-900 ">
-            <!-- <span class="absolute z-10 inset-0" aria-hidden="true"></span> -->
             <div class="px-4 py-2 flex flex-col justify-center text-white text-center bg-black bg-opacity-30">
               <h3 class="font-medium">New Arrivals</h3>
               <p aria-hidden="true" class="text-sm">Shop now</p>
@@ -38,13 +36,13 @@
         <div class="embla">
           <div class="embla__container">
             <div class="embla__slide lg:h-[30rem]">
-              <img src="<?= base_url(); ?>/img/bg/1.jpg" class="w-full h-full object-cover object-top">
+              <img src="<?= base_url(); ?>/main/img/bg/1.jpg" class="w-full h-full object-cover object-top">
             </div>
             <div class="embla__slide lg:h-[30rem]">
-              <img src="<?= base_url(); ?>/img/bg/2.jpg" class="w-full h-full object-cover object-top">
+              <img src="<?= base_url(); ?>/main/img/bg/2.jpg" class="w-full h-full object-cover object-top">
             </div>
             <div class="embla__slide lg:h-[30rem]">
-              <img src="<?= base_url(); ?>/img/bg/3.jpg" class="w-full h-full object-cover object-top">
+              <img src="<?= base_url(); ?>/main/img/bg/3.jpg" class="w-full h-full object-cover object-top">
             </div>
           </div>
         </div>

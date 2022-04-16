@@ -2,8 +2,8 @@ module.exports = {
   content: [
     "./modules/Product/Views/*.php",
     "./modules/Product/Views/**/*.php",
-    "./modules/Product/Views/**/**/*.php",
-    "./modules/Product/Views/**/**/**/*.php",
+    "./modules/User/Views/*.php",
+    "./modules/User/Views/**/*.php",
   ],
   theme: {
     extend: {
