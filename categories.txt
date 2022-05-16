@@ -1,0 +1,28 @@
+Style & Fashion         -> Men        -> Clothing     -> Shirts, T-shirts, Tank Top, Dresses / Gowns, Suits, Pyjamas, Uniforms, Hijab, Lingerie, Underwear, Outerwear(Jackets, Sweaters, Blazer, Coats, Hoodies)
+                           Women         Pants / Trousers         -> Skirts, Leggings, Jeans
+                           Kids          Footwear (Shoes, High Heels, Sneakers, Socks, Boots, Sandals)
+           
+Accessories             -> Man        -> Hats, Watches, Jewelry, Sunglasses, Bags(Handbags, Ransel), Belts, Gloves, Wallets
+                           Woman
+
+Sports                  -> Man        -> Sportswear
+                           Woman
+                           Kids
+          
+Electronics             -> Laptops & Accessories, Computers & Accessories, Gaming accessories, Smartphones & Accessories, Smartwatches, TV & Video, Headphones, Tablets, Photography & Videography, Office Electronics, Wearables
+                        -> Accessories
+
+Toys & Outdoors
+
+Tools
+
+Furnitures              -> Home & Kitchen, Office
+
+Personal Care           -> Health, Beauty
+
+
+__________________________________________________________________________________________________________________________________________
+
+Clothing - Pants - Footwear -> Size, Color
+
+Laptops                     -> Color, Ram, etc

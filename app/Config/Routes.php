@@ -16,8 +16,8 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * Router Setup
  * --------------------------------------------------------------------
  */
-$routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultNamespace('Product\Controllers');
+$routes->setDefaultController('Product');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,12 +31,12 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+// $routes->get('/', 'Home::index');
 
 // $routes->get('/', function () {
 //   redirect()->to('product');
 // });
-// $routes->get('/', 'Modules\Product\Controllers\Product::index');
+// $routes->get('/', 'Product\Controllers\Product::index');
 
 /** HMVC Routes */
 if (file_exists(ROOTPATH . 'modules')) {

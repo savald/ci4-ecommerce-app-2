@@ -36,13 +36,13 @@
         <div class="embla">
           <div class="embla__container">
             <div class="embla__slide lg:h-[30rem]">
-              <img src="<?= base_url(); ?>/main/img/bg/1.jpg" class="w-full h-full object-cover object-top">
+              <img src="<?= base_url(); ?>/img/bg/1.jpg" class="w-full h-full object-cover object-top">
             </div>
             <div class="embla__slide lg:h-[30rem]">
-              <img src="<?= base_url(); ?>/main/img/bg/2.jpg" class="w-full h-full object-cover object-top">
+              <img src="<?= base_url(); ?>/img/bg/2.jpg" class="w-full h-full object-cover object-top">
             </div>
             <div class="embla__slide lg:h-[30rem]">
-              <img src="<?= base_url(); ?>/main/img/bg/3.jpg" class="w-full h-full object-cover object-top">
+              <img src="<?= base_url(); ?>/img/bg/3.jpg" class="w-full h-full object-cover object-top">
             </div>
           </div>
         </div>

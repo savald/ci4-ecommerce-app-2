@@ -48,6 +48,7 @@ class Autoload extends AutoloadConfig
     'Product' => ROOTPATH . 'modules\product',
     'User' => ROOTPATH . 'modules\User',
     'Admin' => ROOTPATH . 'modules\Admin',
+    'Dashboard' => ROOTPATH . 'modules\Dashboard',
   ];
 
   /**

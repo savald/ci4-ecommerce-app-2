@@ -2,8 +2,8 @@ module.exports = {
   content: [
     "./modules/Product/Views/*.php",
     "./modules/Product/Views/**/*.php",
-    "./modules/User/Views/*.php",
-    "./modules/User/Views/**/*.php",
+    "./modules/Dashboard/Views/*.php",
+    "./modules/Dashboard/Views/**/*.php",
   ],
   theme: {
     extend: {
@@ -29,5 +29,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms')
   ],
 }

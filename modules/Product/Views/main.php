@@ -7,29 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="<?= base_url(); ?>/main/css/app.css">
+  <link rel="stylesheet" href="<?= base_url(); ?>/css/app.css">
+  <link rel="stylesheet" href="<?= base_url(); ?>/css/style.css">
   <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
   <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
-  <style>
-    [x-cloak] {
-      display: none !important;
-    }
 
-    .embla {
-      overflow: hidden;
-    }
-
-    .embla__container {
-      display: flex;
-    }
-
-    .embla__slide {
-      position: relative;
-      flex: 0 0 100%;
-    }
-  </style>
   <title><?= $title; ?></title>
 </head>
 

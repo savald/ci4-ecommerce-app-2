@@ -1,0 +1,48 @@
+[x-cloak] {
+  display: none !important;
+}
+
+/* Embla Carousel */
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  position: relative;
+  flex: 0 0 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 100vh;
+  background: #f1f5f9;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e0e7ff;
+  border-radius: 100vh;
+  /* transition: all; */
+  /* border: 3px solid #edf2f7; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c7d2fe;
+}
+
+.ck-editor__editable_inline {
+  min-height: 100px;
+}

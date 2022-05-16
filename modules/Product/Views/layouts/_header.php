@@ -54,7 +54,7 @@
 
                 <a href="#" @click="userMenu = !userMenu" @keydown.escape="userMenu = false" class="group flex items-center p-1 text-gray-400 border rounded-full transition hover:shadow-sm hover:text-gray-500">
                   <div class="h-9 w-9 border rounded-full overflow-hidden transition group-hover:saturate-50">
-                    <img src="<?= base_url(); ?>/main/img/bg/2.jpg" class="object-cover object-center w-full h-full" alt="">
+                    <img src="<?= base_url(); ?>/img/bg/2.jpg" class="object-cover object-center w-full h-full" alt="">
                   </div>
                   <div class="text-xs font-medium mx-2"><?= session()->get('name'); ?></div>
                   <svg class="flex-shrink-0 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -63,10 +63,10 @@
                 </a>
 
                 <!-- User Menu -->
-                <div x-show="userMenu" @keyup.escape.window="userMenu = false" @click.outside="userMenu = false" x-cloak x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" @click.away="open = false" class="origin-top-right absolute right-0 z-50 mt-0.5 w-40 rounded shadow-2xl overflow-hidden bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <div x-show="userMenu" @keyup.escape.window="userMenu = false" @click.outside="userMenu = false" x-cloak x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="origin-top-right absolute right-0 z-50 mt-0.5 w-40 rounded shadow-2xl overflow-hidden bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
 
                   <div>
-                    <a href="<?= site_url('user/account'); ?>" class="flex items-center text-gray-500 px-4 py-3 text-sm transition hover:bg-gray-100">
+                    <a href="<?= site_url('dashboard/home'); ?>" class="flex items-center text-gray-500 px-4 py-3 text-sm transition hover:bg-gray-100">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
