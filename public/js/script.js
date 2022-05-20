@@ -1,9 +1,9 @@
-// Clik upload image
+/* IMAGE UPLOADER */
 function upload() {
   document.getElementById("file-upload").click();
 }
 
-// membuat slug otomatis dari title
+/* CREATE SLUG */
 // const title = document.querySelector("#title");
 // const slug = document.querySelector("#slug");
 
@@ -13,7 +13,7 @@ function upload() {
 //     .then((data) => (slug.value = data.slug));
 // });
 
-// Preview image
+/* PREVIEW IMAGE */
 function previewImage() {
   const image = document.querySelector("#image");
   const imgPreview = document.querySelector(".img-preview");
@@ -28,25 +28,27 @@ function previewImage() {
   };
 }
 
+/* SET ADDRESS USER */
+function setAddress() {
+  let data = {
+    showAddress: true,
+    newAddress: "",
+    addresses: [""],
+    addAddress() {
+      if (this.newAddress != "") {
+        data.addresses.push(this.newAddress);
+      }
+      this.newAddress = "";
+      console.log(data.addresses);
+      return false;
+    },
+  };
+
+  return data;
+}
+
+/* SET CATEGORIES */
 function getCategories() {
-  // let data1 = [{ Men: {} }, { Women: {} }];
-  // let data2 = ["Sportswear", "Fitness"];
-
-  // let data;
-  // if (data1.some((dat) => typeof dat == "object")) {
-  //   // console.log("object");
-  //   data = Object.keys(data1);
-  // } else {
-  //   // console.log("bukan object");
-  //   data = data2;
-  // }
-
-  // data = data1.some((dat) => typeof dat == "object") ? data1 : data2;
-
-  // console.log(Object.keys(data1));
-  // console.log(data1);
-  // console.log(data);
-
   return {
     selectedCategory: "",
     selectedSubcategory: "",

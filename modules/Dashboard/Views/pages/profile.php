@@ -56,35 +56,53 @@
     </div>
 
     <!-- Addresses -->
-    <div class="w-1/2 border-l border-gray-100 ml-4 pl-4">
+    <div x-data="setAddress()" class="w-1/2 border-l-2 border-gray-100 ml-4 pl-4">
       <table class="text-left w-full border-collapse">
         <thead>
-          <tr class="text-gray-800 font-bold text-sm border-b-2 border-gray-200">
+          <tr class="text-gray-800 font-medium text-sm border-b-2 border-gray-200">
             <th class="pb-2 px-6">Address</th>
             <th class="pb-2 px-6" width="100">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="border-b border-gray-200 text-sm transition hover:bg-gray-100">
-            <td class="py-4 px-6">New York</td>
-            <td class="py-4 text-center">
-              <button>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
-              </button>
-              <button>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                </svg>
-              </button>
-            </td>
+          <tr class="border-b border-gray-200 text-xs transition hover:bg-indigo-50">
+            <template x-for="(address, index) in addresses" :key="index">
+              <td class="py-4 px-6" x-text="address"></td>
+              <td class="py-4 text-center">
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                </button>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                  </svg>
+                </button>
+              </td>
+            </template>
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
 
+      <div>
+        <button @click="showAddress = !showAddress; $nextTick(() => showAddress ? $refs.addressInput.focus() : $refs.addressInput.blur());" class="flex items-center justify-between my-3 px-2 py-1 bg-emerald-500 text-white text-xs rounded shadow transition hover:bg-emerald-600">New address</button>
+        <div x-show="showAddress" x-cloak x-collapse @click.outside="showAddress = false">
+          <div class=" bg-indigo-50 rounded p-2 space-y-2">
+            <textarea x-ref="addressInput" x-model="newAddress" class="block text-xs w-full px-3 rounded placeholder-gray-300 border-none transition focus:bg-white focus:ring-2 focus:ring-indigo-400" placeholder="New address"></textarea>
+            <button @click="addAddress" class="flex items-center justify-between ml-auto px-2 py-1 text-xxs bg-sky-500 text-white rounded-full shadow transition hover:bg-sky-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <span>Add</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 </div>
 
 <?= $this->endSection() ?>
