@@ -30,21 +30,21 @@ function previewImage() {
 
 /* SET ADDRESS USER */
 function setAddress() {
-  let data = {
-    showAddress: true,
+  return {
+    showAddress: false,
     newAddress: "",
-    addresses: [""],
+    addresses: [],
     addAddress() {
       if (this.newAddress != "") {
-        data.addresses.push(this.newAddress);
+        this.addresses.push({ id: this.addresses.length, newAddress: this.newAddress });
       }
       this.newAddress = "";
-      console.log(data.addresses);
       return false;
     },
+    removeAddress(addressId) {
+      this.addresses.splice(this.addresses.indexOf(addressId), 1);
+    },
   };
-
-  return data;
 }
 
 /* SET CATEGORIES */
