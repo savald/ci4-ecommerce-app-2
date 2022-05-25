@@ -32,17 +32,52 @@ function previewImage() {
 function setAddress() {
   return {
     showAddress: false,
-    newAddress: "",
-    addresses: [],
-    addAddress() {
-      if (this.newAddress != "") {
-        this.addresses.push({ id: this.addresses.length, newAddress: this.newAddress });
+    update: false,
+    error: false,
+    newAddress: {
+      id: null,
+      name: "",
+    },
+    addresses: [
+      // { id: 1, name: "Banda Aceh" },
+      // { id: 2, name: "Bandung" },
+    ],
+    showInputAddress() {
+      this.update = false;
+      if (this.newAddress.name === "") {
+        this.showAddress = !this.showAddress;
+      } else {
+        this.newAddress.name = "";
+        this.showAddress = true;
       }
-      this.newAddress = "";
-      return false;
+    },
+    addAddress() {
+      if (this.newAddress.name === "") {
+        this.error = true;
+        return;
+      }
+      this.addresses.push({ id: this.addresses.length + 1, name: this.newAddress.name });
+      this.newAddress.name = "";
     },
     removeAddress(addressId) {
       this.addresses.splice(this.addresses.indexOf(addressId), 1);
+      this.newAddress.name = "";
+      this.update = false;
+    },
+    editAddress() {
+      this.showAddress = true;
+      this.update = true;
+      this.newAddress.name = this.address.name;
+      this.newAddress.id = this.address.id;
+    },
+    updateAddress(addressId, addressName) {
+      if (this.newAddress.name === "") {
+        this.error = true;
+        return;
+      }
+      this.addresses[addressId - 1].name = addressName;
+      this.newAddress.name = "";
+      this.update = false;
     },
   };
 }
