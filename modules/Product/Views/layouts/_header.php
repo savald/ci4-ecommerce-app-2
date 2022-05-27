@@ -1,6 +1,7 @@
-<div x-data="{ openSidebar: false, logModal: false, regModal: false }" class="bg-white ">
+<div x-data="{ openSidebar: false, logModal: false, regModal: true }" class="bg-white ">
 
-  <?= $this->include('\Modules\Product\Views\Layouts\_log-reg-modal') ?>
+  <?= $this->include('\Modules\Product\Views\Layouts\_login-modal') ?>
+  <?= $this->include('\Modules\Product\Views\Layouts\_register-modal') ?>
   <?= $this->include('\Modules\Product\Views\Layouts\_sidebar-mobile') ?>
 
   <header class="relative bg-white">

@@ -4,18 +4,46 @@
 
 <div class="bg-white mt-7 px-5 py-6 rounded-lg shadow">
   <!-- Avatar -->
-  <div class="p-4 rounded-lg h-fit">
-    <div class="flex items-center space-x-4">
-      <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp" alt="" class="w-32 h-32 rounded-full object-cover object-center">
-      <div class="text-xs space-y-2">
-        <div class="cursor-pointer flex items-center space-x-1 shadow-md rounded-full bg-gray-400 py-2 px-3 text-white text-center w-fit transition hover:bg-gray-500 hover:shadow-none" onclick="upload()">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
-          </svg>
-          <span>Change avatar</span>
+  <div x-data="imageData()" class="p-4 rounded-lg h-fit">
+    <div class="flex items-center">
+      <!-- Placeholder image -->
+      <div x-show="!previewPhoto" class="w-32 h-32 rounded-full shadow-lg overflow-hidden">
+        <img src="<?= base_url(); ?>/img/users/default_user.png" alt="" class="w-32 h-32 object-cover object-center">
+      </div>
+      <!-- Show a preview of the photo -->
+      <div x-show="previewPhoto" x-cloak class="w-32 h-32 rounded-full shadow-lg overflow-hidden">
+        <img :src="previewPhoto" alt="" class="w-32 h-32 object-cover object-center">
+      </div>
+      <div class="text-xs ml-4">
+        <div class="flex items-center space-x-2">
+          <div class="cursor-pointer flex items-center space-x-1 shadow-md rounded-full bg-gray-400 py-2 px-3 text-white text-center w-fit transition hover:bg-gray-500 hover:shadow-none" onclick="upload()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+            </svg>
+            <span>Change avatar</span>
+          </div>
+          <!-- Display the file name when available -->
+          <span x-text="fileName || 'No file chosen'" class="text-gray-500 italic">No file chosen</span>
+          <!-- Removes the selected file -->
+          <button x-show="fileName" x-cloak @click="clearPreview($refs)" x-data="{ tooltip: false }" type="button" aria-label="Remove image" class="text-rose-600">
+            <div x-on:mouseover="tooltip = true" x-on:mouseleave="tooltip = false">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4" aria-hidden="true" focusable="false">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+              </svg>
+              <!-- Tooltip -->
+              <div class="relative" x-cloak x-show.transition.origin.top="tooltip">
+                <div class="absolute bottom-7 -left-5 z-10 w-32 p-2 -mt-1 text-xs leading-tight text-white bg-neutral-800 rounded-md shadow-lg">
+                  Remove image
+                </div>
+                <svg class="absolute bottom-3 -left-[7px] z-10 w-6 h-6 text-neutral-800  fill-current stroke-current" width="8" height="8">
+                  <rect x="12" y="-10" width="8" height="8" transform="rotate(45)" />
+                </svg>
+              </div>
+            </div>
+          </button>
         </div>
-        <p class="text-gray-500">Upload JPG, GIF or PNG image. 300 x 300 required.</p>
-        <input type="file" name="avatar" id="file-upload" class="sr-only">
+        <p class="text-gray-700 mt-2">Upload JPG, GIF or PNG image. 300 x 300 required.</p>
+        <input @change="updatePreview($refs)" x-ref="input" type="file" name="avatar" id="file-upload" class="sr-only">
       </div>
     </div>
   </div>
