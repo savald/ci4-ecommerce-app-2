@@ -51,17 +51,17 @@
   <div class="flex justify-between">
     <div class="w-1/2">
       <div class="mb-4">
-        <label for="fullname" class="label-input">Fullname</label>
+        <label for="fullname" class="label-input-profile">Fullname</label>
         <input type="text" name="fullname" id="fullname" class="input-profile" placeholder="Your name" autofocus>
       </div>
       <!-- Email & Phone -->
       <div class="flex space-x-2">
         <div class="mb-4">
-          <label for="email" class="label-input">Email</label>
+          <label for="email" class="label-input-profile">Email</label>
           <input type="email" name="email" id="email" class="input-profile" placeholder="example@email.com" autofocus>
         </div>
         <div class="mb-4">
-          <label for="phone" class="label-input">Phone</label>
+          <label for="phone" class="label-input-profile">Phone</label>
           <input type="text" name="phone" id="phone" class="input-profile" placeholder="Phone Number" autofocus>
         </div>
       </div>
@@ -69,11 +69,11 @@
       <!-- Password -->
       <div class="flex space-x-2">
         <div class="mb-4">
-          <label for="password" class="label-input">New Password</label>
+          <label for="password" class="label-input-profile">New Password</label>
           <input type="password" name="password" id="password" class="input-profile" placeholder="••••••••" autofocus>
         </div>
         <div class="mb-4">
-          <label for="confirm_password" class="label-input">Confirm Password</label>
+          <label for="confirm_password" class="label-input-profile">Confirm Password</label>
           <input type="text" name="confirm_password" id="confirm_password" class="input-profile" placeholder="••••••••" autofocus>
         </div>
       </div>

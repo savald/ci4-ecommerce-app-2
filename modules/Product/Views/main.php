@@ -47,6 +47,7 @@
     </div>
   </div>
 
+  <script src="<?= base_url(); ?>/js/script.js"></script>
   <script type="text/javascript">
     const emblaNode = document.querySelector(".embla");
     const loop = {

@@ -1,6 +1,6 @@
   <!-- Register Modal -->
   <div x-show="regModal" x-cloak x-transition:enter="transition-opacity ease-linear duration-2000" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-2000" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="mx-auto fixed inset-0 flex items-center justify-center overflow-y-auto bg-black z-50 bg-opacity-25">
-    <div  class="p-4 w-full max-w-md h-full md:h-auto">
+    <div class="p-4 w-full max-w-md h-full md:h-auto">
       <!-- Modal content -->
       <div @click.outside="regModal = false" class="bg-white rounded shadow-lg dark:bg-gray-700">
         <!-- Close button -->
@@ -11,22 +11,25 @@
             </svg>
           </button>
         </div>
-        <form class="px-4 pb-4 space-y-6 lg:px-8 sm:pb-6 xl:pb-8" action="<?= site_url('user/create-account'); ?>" method="POST">
+        <h3 class="text-xl font-bold text-center text-gray-900 dark:text-white">Create account</h3>
+        <form id="reg_form" class="px-4 pb-4 space-y-6 lg:px-8 sm:pb-6 xl:pb-8" action="<?= site_url('user/create-account'); ?>" method="POST">
           <?= csrf_field() ?>
-          <h3 class="text-xl font-bold text-center text-gray-900 dark:text-white">Create account</h3>
           <div>
-            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Full Name</label>
-            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded focus:border-indigo-500 focus:outline-none appearance-none block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Your Name..." autofocus>
+            <label for="name" class="label-modal">Full Name</label>
+            <input type="text" name="name" id="reg_name" class="input-modal border-gray-300" placeholder="Your Name..." autofocus>
+            <div class="hidden error-input"></div>
           </div>
           <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email Address</label>
-            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded focus:border-indigo-500 focus:outline-none appearance-none block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="email@example.com">
+            <label for="email" class="label-modal">Email Address</label>
+            <input type="text" name="email" id="reg_email" class="input-modal border-gray-300" placeholder="email@example.com">
+            <div class="hidden error-input"></div>
           </div>
           <div>
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
-            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded focus:border-indigo-500 focus:outline-none appearance-none block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+            <label for="password" class="label-modal">Password</label>
+            <input type="password" name="password" id="reg_password" placeholder="••••••••" class="input-modal border-gray-300">
+            <div class="hidden error-input"></div>
           </div>
-          <button type="submit" class="w-full text-white transition bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded text-sm px-5 py-2.5 text-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">Create account</button>
+          <button type="submit" class="log-reg-btn">Create account</button>
           <div class="text-sm text-center font-medium text-gray-500 dark:text-gray-300">
             Already have an account?
             <a @click="regModal = false; logModal = true" href="#" class="text-indigo-700 hover:underline dark:text-indigo-500">Sign in</a>

@@ -3,6 +3,70 @@ function upload() {
   document.getElementById("file-upload").click();
 }
 
+// VALIDATION
+const registerForm = document.getElementById("reg_form");
+const loginForm = document.getElementById("log_form");
+
+registerForm.addEventListener("submit", (e) => {
+  // Register Input
+  const nameInput = document.getElementById("reg_name");
+  const emailRegInput = document.getElementById("reg_email");
+  const passwordRegInput = document.getElementById("reg_password");
+  e.preventDefault();
+  checkInputs(nameInput, emailRegInput, passwordRegInput);
+});
+
+loginForm.addEventListener("submit", (e) => {
+  // Login Input
+  const emailLogInput = document.getElementById("log_email");
+  const passwordLogInput = document.getElementById("log_password");
+  e.preventDefault();
+  checkInputs(null, emailLogInput, passwordLogInput);
+});
+
+function checkInputs(name, email, password) {
+  //get the values from the inputs
+  const emailValue = email.value.trim();
+  const passwordValue = password.value.trim();
+  if (name != null) {
+    const nameValue = name.value.trim();
+    if (nameValue === "") {
+      setErrorFor(name, "Please enter your name!");
+    } else if (nameValue.length < 3) {
+      setErrorFor(name, "Name must be at least 3 characters!");
+    }
+  }
+
+  if (emailValue === "") {
+    setErrorFor(email, "Email cannot be blank");
+  } else if (!isEmail(emailValue)) {
+    setErrorFor(email, "Email is not valid!");
+  } else {
+    // setSuccessFor(email);
+  }
+
+  if (passwordValue === "") {
+    setErrorFor(password, "Password cannot be blank");
+  } else if (passwordValue.length < 6) {
+    setErrorFor(password, "Password must be at least 6 characters!");
+  }
+}
+
+function setErrorFor(input, message) {
+  input.classList.replace("border-gray-300", "border-rose-500");
+  input.nextElementSibling.classList.replace("hidden", "block");
+  input.nextElementSibling.innerHTML = message;
+}
+
+// function setSuccessFor(input) {
+//   const formControl = input.parentElement;
+//   formControl.className = "form-control success";
+// }
+
+function isEmail(email) {
+  return /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email);
+}
+
 /* CREATE SLUG */
 // const title = document.querySelector("#title");
 // const slug = document.querySelector("#slug");
